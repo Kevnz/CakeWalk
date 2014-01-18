@@ -1,0 +1,23 @@
+<div class="header pure-u-1">
+    <h1 class="pure-u-1">{{title}}
+    <h2 class="pure-u">Kickstarted app</h2>
+
+</div>
+<div class="content">
+    <p> Welcome to {{title}}</p>
+    <div class="gallery">
+        <div class="contentBox">
+            {{#images}}
+                <div class="image-pane">
+                    <img src="{{path}}" />
+                </div>
+            {{/images}}
+        </div>
+    </div>
+    <div class="gallery-shim"></div>
+</div>
+<script>
+    require(["app/gallery"], function(Gallery) {
+        var g = new Gallery();
+    });
+</script>
