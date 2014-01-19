@@ -7,11 +7,32 @@ var express = require('express'),
     expstate = require('express-state');
 
 expstate.extend(app);
-
+var helpers = {
+    ifCond: function(v1, v2, options) {
+        if(v1 === v2) {
+           return options.fn(this);
+        }
+        return options.inverse(this);
+    },
+    thumbnail: function (path) {
+        return path.replace('.jpg', '_thumb.jpg');
+    },
+    gallery: function (images) {
+        var result = [];
+        for (var i = 0; i < 5; i++) {
+            if(i === 0) {
+                result.push('<div class="main"><img src="' + images[i].path + '"/></div>');
+            } else if (i === 1 || i === 2 || i === 3  ) {
+                result.push('<div class="thumbnail"><img src="' + images[i].path.replace('.jpg', '_thumb.jpg') + '"/></div>');
+            }
+        }
+        return result.join('');
+    }
+};
 app.configure(function(){
     app.set('port', process.env.PORT || 3210);
-    app.set('views', __dirname + '/views'); 
-    app.engine('handlebars', exphbs({defaultLayout: 'main'}));
+    app.set('views', __dirname + '/views');
+    app.engine('handlebars', exphbs({defaultLayout: 'main', helpers: helpers}));
     app.set('view engine', 'handlebars');
 
     app.use(express.favicon());

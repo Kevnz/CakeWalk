@@ -31,10 +31,20 @@
   position: relative;
   display: inline-block;
   min-width: 1024px;
+  text-align: center;
 }
-/* line 29, ../../sass/_gallery.scss */
+/* line 30, ../../sass/_gallery.scss */
 .gallery .image-pane img {
   vertical-align: middle;
+}
+
+/* line 35, ../../sass/_gallery.scss */
+.thumbnail {
+  display: inline-block;
+  padding: 5px;
+  margin: 5px;
+  min-height: 175px;
+  min-width: 150px;
 }
 
 /* line 2, ../../sass/style.scss */
