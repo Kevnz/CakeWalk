@@ -6,7 +6,6 @@ exports.index = function(req, res){
     var images = [];
     var galleryPath = path.join(__dirname, '../public/img/gallery');
     var httpPath = '/img/gallery/';
-    console.log(galleryPath);
     fs.readdir(galleryPath, function (err, files) {
         for (var i = 0; i < files.length; i++) {
             if(files[i].toLowerCase().indexOf('thumb') === -1){
