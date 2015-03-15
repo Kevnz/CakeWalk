@@ -7,7 +7,7 @@ class List extends React.Component {
 
         return (
             <ul >
-                
+                <li><SmallImage></SmallImage></li>
             </ul>
         );
     }

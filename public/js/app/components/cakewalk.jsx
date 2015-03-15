@@ -7,7 +7,7 @@ class CakeWalk extends React.Component {
 
         return (
             <div className="app">
-                <List></List>
+                <List></List><Viewer />
             </div>
         );
     }
