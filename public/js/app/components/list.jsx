@@ -6,9 +6,9 @@ class List extends React.Component {
     render() {
 
         return (
-            <ul >
-                <li><SmallImage></SmallImage></li>
-            </ul>
+            <div className="imgList">
+                <SmallImage name="test"></SmallImage>
+            </div>
         );
     }
 }

@@ -6,8 +6,8 @@ class SmallImage extends React.Component {
     render() {
 
         return (
-            <div className="app">
-                <List></List>
+            <div className="littleImage">
+                 <a href="#"> {this.props.name} </a>
             </div>
         );
     }

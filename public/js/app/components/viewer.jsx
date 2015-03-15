@@ -6,8 +6,8 @@ class Viewer extends React.Component {
     render() {
 
         return (
-            <div >
-                <img />
+            <div className="imgViewer">
+                <img className="mainImg" />
             </div>
         );
     }
