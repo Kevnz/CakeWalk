@@ -27,6 +27,7 @@
     "gulp-rework": "^1.0.3",
     "node-dev": "^2.6.1",
     "reactify": "^1.0.0",
+    "rework-import": "^2.0.1",
     "rework-inherit": "^0.2.3",
     "rework-npm": "^1.0.0",
     "rework-vars": "^3.1.1",

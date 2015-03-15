@@ -3,7 +3,12 @@
 var gulp = require('gulp'),
   jshint = require('gulp-jshint'), 
   browserify = require('browserify'),
-  source = require('vinyl-source-stream');
+  source = require('vinyl-source-stream'),
+  rework = require('gulp-rework'),
+  inherit = require('rework-inherit'),
+  vars = require('rework-vars'),
+  imprt = require('rework-import'),
+  reworkNPM = require('rework-npm');
 
 //lint js files
 gulp.task('lint', function() {
@@ -14,7 +19,14 @@ gulp.task('lint', function() {
 gulp.task('prepLibs', function () {
     return gulp.src('./node_modules/react/dist/*')
         .pipe(gulp.dest('./public/js/libs'))
-})
+});
+
+gulp.task('buildcss', function () {
+    return gulp.src('./css/style.css')
+        .pipe(rework(reworkNPM({shim: { 'purecss': 'build/pure.css' }}),vars(), inherit(),imprt({path: './css/modules/'})))
+        .pipe(gulp.dest('public/css/'));
+});
+
 gulp.task('buildjs', function () {
  
     return browserify({ entries:['./public/js/app/app.jsx'], debug: true })
@@ -35,6 +47,6 @@ gulp.task('images', function () {
 
 });
 
-gulp.task('build', ['prepLibs', 'buildjs']);
+gulp.task('build', ['prepLibs', 'buildjs', 'buildcss']);
 
 gulp.task('default', [ 'build' ]);
