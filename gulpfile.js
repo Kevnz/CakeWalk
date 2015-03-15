@@ -11,10 +11,13 @@ gulp.task('lint', function() {
         .pipe(jshint())
         .pipe(jshint.reporter('default'));
 });
- 
+gulp.task('prepLibs', function () {
+    return gulp.src('./node_modules/react/dist/*')
+        .pipe(gulp.dest('./public/js/libs'))
+})
 gulp.task('buildjs', function () {
  
-    return browserify({ entries:['./jsx/app.jsx'], debug: true })
+    return browserify({ entries:['./public/js/app/app.jsx'], debug: true })
         .transform('reactify', { 'es6': true}) 
         .bundle()
         .on('error', function (e) {
@@ -28,7 +31,10 @@ gulp.task('buildjs', function () {
             console.log('ended');
         });
 });
+gulp.task('images', function () {
 
-gulp.task('build', ['buildjs']);
+});
+
+gulp.task('build', ['prepLibs', 'buildjs']);
 
 gulp.task('default', [ 'build' ]);
