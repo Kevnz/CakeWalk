@@ -12,7 +12,7 @@ exports.index = function(req, res){
                 images.push({path: httpPath+files[i]});
             }
         }
-        res.render('index', { title: 'Kickstarted App', images: images });
+        res.render('index', { title: 'CakeWalk App', images: images });
     });
   
 };
