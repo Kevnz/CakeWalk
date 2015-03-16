@@ -1,5 +1,5 @@
-var React = require('react');
-class Viewer extends React.Component {
+import React from 'react';
+export default class Viewer extends React.Component {
     constructor(props) {
         super(props);
     }
@@ -13,4 +13,3 @@ class Viewer extends React.Component {
         );
     }
 }
-module.exports = Viewer;

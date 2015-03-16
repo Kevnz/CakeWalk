@@ -1,6 +1,6 @@
-var SmallImage = require('./small-image.jsx');
-var React = require('react');
-class List extends React.Component {
+import SmallImage from './small-image.jsx';
+import React from 'react';
+export default class List extends React.Component {
     constructor(props) {
         super(props);
     }
@@ -18,5 +18,3 @@ class List extends React.Component {
         );
     }
 }
-
-module.exports = List;

@@ -21,11 +21,13 @@
     "pure-typography": "^1.0.0",
     "purecss": "^0.6.0",
     "react": "^0.13.0",
+    "react-modal": "^0.1.0",
     "serve-favicon": "~2.2.0",
     "superagent": "^0.21.0",
     "xtconf": "0.0.2"
   },
   "devDependencies": {
+    "babelify": "^5.0.4",
     "browserify": "^9.0.2",
     "gulp": "^3.8.11",
     "gulp-autoprefixer": "^2.1.0",

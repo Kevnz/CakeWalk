@@ -1,10 +1,13 @@
-var React = require('react');
-class SmallImage extends React.Component {
+import React from 'react';
+import PictureActionCreator from '../actions/picture-action-creator';
+
+export default class SmallImage extends React.Component {
     constructor(props) {
         super(props);
     }
     handleImageClick (e) {
     	e.preventDefault(); 
+        PictureActionCreator.selectPicture(this.props.name);
     }
     render() {
         return (
@@ -20,5 +23,3 @@ class SmallImage extends React.Component {
         );
     }
 }
-
-module.exports = SmallImage;
