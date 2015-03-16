@@ -4,10 +4,10 @@ class CakeWalk extends React.Component {
     }
 
     render() {
-
+        console.log(this.props)
         return (
             <div className="app">
-                <List></List><Viewer />
+                <List images={this.props.data} ></List><Viewer />
             </div>
         );
     }
