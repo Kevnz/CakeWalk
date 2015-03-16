@@ -14,11 +14,14 @@ var imageUrls = [];
 
 var files = fs.readdirSync('./gallery');
 for (var i = 0; i < files.length; i++) {
-	imageUrls.push({
-		thumb: cloudinary.url(files[i], { width: 125, height: 155, crop:'fit'})+'.jpg',
-		full: cloudinary.url(files[i])+'.jpg',
-		name:files[i]
-	});
+	if (files[i] !== '.DS_Store') {
+		imageUrls.push({
+			thumb: cloudinary.url(files[i], { width: 125, height: 155, crop:'fit'})+'.jpg',
+			full: cloudinary.url(files[i])+'.jpg',
+			name:files[i]
+		});
+	}
+
 };
 
 module.exports = imageUrls;

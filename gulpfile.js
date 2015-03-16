@@ -11,7 +11,7 @@ var gulp = require('gulp'),
   reworkNPM = require('rework-npm'),
   autoprefixer = require('gulp-autoprefixer'),
   watch = require('gulp-watch');
-
+var babelify = require("babelify");
 gulp.task('watch', function() {
     
     watch('./public/js/app/**/*.*' , function() {
@@ -56,7 +56,9 @@ gulp.task('buildcss', function () {
 gulp.task('buildjs', function () {
  
     return browserify({ entries:['./public/js/app/app.jsx'], debug: true })
-        .transform('reactify', { 'es6': true}) 
+        .transform(babelify.configure({
+          experimental: false
+        })) 
         .bundle()
         .on('error', function (e) {
             console.log('browserify error');

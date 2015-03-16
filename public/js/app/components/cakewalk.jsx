@@ -1,7 +1,8 @@
-var React = require('react');
-var List = require('./list.jsx');
-var Viewer = require('./viewer.jsx');
-class CakeWalk extends React.Component {
+import React from 'react';
+import List from './list.jsx';
+import Viewer from './viewer.jsx';
+
+export default class CakeWalk extends React.Component {
     constructor(props) {
         super(props);
     }
@@ -15,4 +16,3 @@ class CakeWalk extends React.Component {
         );
     }
 }
-module.exports = CakeWalk;
