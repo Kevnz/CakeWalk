@@ -8,7 +8,8 @@ var gulp = require('gulp'),
   inherit = require('rework-inherit'),
   vars = require('rework-vars'),
   imprt = require('rework-import'),
-  reworkNPM = require('rework-npm');
+  reworkNPM = require('rework-npm'),
+  autoprefixer = require('gulp-autoprefixer');
 
 //lint js files
 gulp.task('lint', function() {
@@ -23,7 +24,21 @@ gulp.task('prepLibs', function () {
 
 gulp.task('buildcss', function () {
     return gulp.src('./css/style.css')
-        .pipe(rework(reworkNPM({shim: { 'purecss': 'build/pure.css' }}),vars(), inherit(),imprt({path: './css/modules/'})))
+        .pipe(rework(reworkNPM({ 
+            shim: { 
+                'purecss': 'build/pure.css'
+            }}),
+            vars(), 
+            inherit(),
+            imprt({
+                path: './css/modules/'
+            })
+            )
+        )
+        .pipe(autoprefixer({
+            browsers: ['last 2 versions'],
+            cascade: false
+        }))
         .pipe(gulp.dest('public/css/'));
 });
 
