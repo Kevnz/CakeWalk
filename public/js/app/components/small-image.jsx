@@ -4,14 +4,13 @@ class SmallImage extends React.Component {
         super(props);
     }
     handleImageClick (e) {
-    	e.preventDefault();
-    	console.log(arguments);
+    	e.preventDefault(); 
     }
     render() {
         return (
             <li className="cw-imgListItem">
             	<a className="cw-imgThumb" href="#"
-            		onClick={this.handleImageClick}
+            		onClick={this.handleImageClick.bind(this)}
             		data-image-name={this.props.name}
             		>
             		<img alt={this.props.name} className="cw-imgThumb" src={this.props.thumb} />
