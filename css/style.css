@@ -1,9 +1,11 @@
 @import "purecss";
+@import "pure-extras";
 @import "./modules/vars";
 body {
 
   background: var(--color-back);
   color:var(--color-front);
+  margin:50px;
 }
 body * {
 	  box-sizing: border-box;;
@@ -11,9 +13,20 @@ body * {
 .app {
 	inherit: .pure-g;
 }
-.imgList {
+.cw-imgList {
+	inherit: .pure-thumbnails; 
 	inherit: .pure-u-2-5;
-	display: inline-block;
+	max-height: 100%;
+	overflow: scroll;
+}
+.cw-imgListItem {
+	display: block!important;
+}
+.cw-imgThumb {
+	inherit: .pure-thumb;
+	inherit: .pure-thumb-rounded;
+}
+.imgList {
 	border:1px solid var(--color-front);
 	min-height: 20px;
 }
