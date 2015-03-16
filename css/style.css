@@ -5,7 +5,9 @@ body {
   background: var(--color-back);
   color:var(--color-front);
 }
-
+body * {
+	  box-sizing: border-box;;
+}
 .app {
 	inherit: .pure-g;
 }
@@ -20,4 +22,7 @@ body {
 	border:1px solid var(--color-front);
 	display: inline-block;
 	min-height: 20px;
+}
+.littleImage {
+	 display: inline-block;
 }
