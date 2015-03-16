@@ -9,8 +9,19 @@ var gulp = require('gulp'),
   vars = require('rework-vars'),
   imprt = require('rework-import'),
   reworkNPM = require('rework-npm'),
-  autoprefixer = require('gulp-autoprefixer');
+  autoprefixer = require('gulp-autoprefixer'),
+  watch = require('gulp-watch');
 
+gulp.task('watch', function() {
+    
+    watch('./public/js/app/**/*.*' , function() {
+        gulp.start('buildjs');
+    });
+        watch( './css/**/*.css', function() {
+        gulp.start('buildcss');
+    });
+
+});
 //lint js files
 gulp.task('lint', function() {
     gulp.src(['*.js','routes/*.js', 'public/*.js'])
