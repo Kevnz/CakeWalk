@@ -1,3 +1,5 @@
+var SmallImage = require('./small-image.jsx');
+var React = require('react');
 class List extends React.Component {
     constructor(props) {
         super(props);
@@ -10,9 +12,11 @@ class List extends React.Component {
              return(<SmallImage name={imageInfo.name} thumb={imageInfo.thumb} full={imageInfo.full}></SmallImage>);
         });
         return (
-            <div className="imgList">
+            <ul className="cw-imgList">
                {imageNodes}
-            </div>
+            </ul>
         );
     }
 }
+
+module.exports = List;
