@@ -484,7 +484,7 @@ th {
 /*csslint regex-selectors:false, known-properties:false, duplicate-properties:false*/
 
 .pure-g,
-.app {
+.App {
   letter-spacing: -0.31em;
   /* Webkit: collapse white-space between units */
   *letter-spacing: normal;
@@ -535,7 +535,7 @@ th {
 
 .opera-only :-o-prefocus,
 .pure-g,
-.app {
+.App {
   word-spacing: -0.43em;
 }
 
@@ -556,7 +556,7 @@ this the same font stack that Normalize.css sets for the `body`.
 */
 
 .pure-g [class *= "pure-u"],
-.app [class *= "pure-u"] {
+.App [class *= "pure-u"] {
   font-family: sans-serif;
 }
 
@@ -606,8 +606,8 @@ this the same font stack that Normalize.css sets for the `body`.
 .pure-u-22-24,
 .pure-u-23-24,
 .pure-u-24-24,
-.cw-imgList,
-.imgViewer {
+.List,
+.Viewer {
   display: inline-block;
   *display: inline;
   zoom: 1;
@@ -674,7 +674,7 @@ this the same font stack that Normalize.css sets for the `body`.
 }
 
 .pure-u-2-5,
-.cw-imgList {
+.List {
   width: 40%;
   *width: 39.9690%;
 }
@@ -708,7 +708,7 @@ this the same font stack that Normalize.css sets for the `body`.
 }
 
 .pure-u-3-5,
-.imgViewer {
+.Viewer {
   width: 60%;
   *width: 59.9690%;
 }
@@ -1567,7 +1567,7 @@ striping:
 /* Thumbnails */
 
 .pure-thumbnails li,
-.cw-imgList li {
+.List li {
   text-align: center;
   display: inline-block;
   *display: inline;
@@ -1579,26 +1579,26 @@ striping:
 }
 
 .pure-thumbnails,
-.cw-imgList {
+.List {
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
 .pure-thumbnails a:focus,
-.cw-imgList a:focus {
+.List a:focus {
   outline: 0 none;
 }
 
 .pure-thumb,
-.cw-imgThumb {
+.SmallImage-img {
   display: block;
   text-decoration: none;
   color: inherit;
 }
 
 .pure-thumb img,
-.cw-imgThumb img {
+.SmallImage-img img {
   max-width: 100%;
   margin-right: auto;
   margin-left: auto;
@@ -1612,20 +1612,20 @@ striping:
 }
 
 .pure-thumb .caption,
-.cw-imgThumb .caption {
+.SmallImage-img .caption {
   text-align: left;
   display: block;
   margin: 0 5px 6px;
 }
 
 .pure-thumb .caption p,
-.cw-imgThumb .caption p {
+.SmallImage-img .caption p {
   margin: 0.3em 0 0;
   font-size: 75%;
 }
 
 .pure-thumb .caption .caption-head,
-.cw-imgThumb .caption .caption-head {
+.SmallImage-img .caption .caption-head {
   font-weight: bold;
   margin-top: 0.3em;
 }
@@ -1635,7 +1635,7 @@ striping:
 }
 
 .pure-thumb-rounded img,
-.cw-imgThumb img {
+.SmallImage-img img {
   border-radius: 3px;
 }
 
@@ -1849,26 +1849,22 @@ body * {
   box-sizing: border-box;
 }
 
-.cw-imgList {
+.List {
   max-height: 100%;
-  overflow: scroll;
-}
-
-.cw-imgListItem {
-  display: block!important;
-}
-
-.imgList {
   border: 1px solid #454444;
   min-height: 20px;
 }
 
-.imgViewer {
+.List-item {
+  display: block!important;
+}
+
+.Viewer {
   border: 1px solid #454444;
   display: inline-block;
   min-height: 20px;
 }
 
-.littleImage {
+.SmallImage {
   display: inline-block;
 }

@@ -10,32 +10,30 @@ body {
 body * {
 	  box-sizing: border-box;;
 }
-.app {
+.App {
 	inherit: .pure-g;
 }
-.cw-imgList {
+.List {
 	inherit: .pure-thumbnails; 
 	inherit: .pure-u-2-5;
 	max-height: 100%;
-	overflow: scroll;
-}
-.cw-imgListItem {
-	display: block!important;
-}
-.cw-imgThumb {
-	inherit: .pure-thumb;
-	inherit: .pure-thumb-rounded;
-}
-.imgList {
 	border:1px solid var(--color-front);
 	min-height: 20px;
 }
-.imgViewer {
+.List-item {
+	display: block!important;
+}
+
+.Viewer {
 	inherit: .pure-u-3-5;
 	border:1px solid var(--color-front);
 	display: inline-block;
 	min-height: 20px;
 }
-.littleImage {
-	 display: inline-block;
+.SmallImage {
+	 display: block;
+}
+.SmallImage-img {
+	inherit: .pure-thumb;
+	inherit: .pure-thumb-rounded;
 }

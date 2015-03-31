@@ -11,12 +11,12 @@ export default class SmallImage extends React.Component {
     }
     render() {
         return (
-            <li className="cw-imgListItem">
-            	<a className="cw-imgThumb" href="#"
+            <li className="SmallImage">
+            	<a className="SmallImage-link" href="#"
             		onClick={this.handleImageClick.bind(this)}
             		data-image-name={this.props.name}
             		>
-            		<img alt={this.props.name} className="cw-imgThumb" src={this.props.thumb} />
+            		<img alt={this.props.name} className="SmallImage-img" src={this.props.thumb} />
                  	 
                  </a>
             </li>

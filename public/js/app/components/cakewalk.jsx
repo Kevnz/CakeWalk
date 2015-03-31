@@ -10,7 +10,7 @@ export default class CakeWalk extends React.Component {
     render() {
         console.log(this.props)
         return (
-            <div className="app">
+            <div className="App">
                 <List images={this.props.data} ></List><Viewer />
             </div>
         );
