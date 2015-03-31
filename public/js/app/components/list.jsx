@@ -12,7 +12,7 @@ export default class List extends React.Component {
              return(<SmallImage name={imageInfo.name} thumb={imageInfo.thumb} full={imageInfo.full}></SmallImage>);
         });
         return (
-            <ul className="cw-imgList">
+            <ul className="List">
                {imageNodes}
             </ul>
         );

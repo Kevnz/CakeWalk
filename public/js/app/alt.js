@@ -1,2 +1,2 @@
 import Alt from 'alt';
-export default alt = new Alt();
+export default new Alt();

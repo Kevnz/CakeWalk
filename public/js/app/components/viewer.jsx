@@ -7,8 +7,8 @@ export default class Viewer extends React.Component {
     render() {
 
         return (
-            <div className="imgViewer">
-                <img className="mainImg" />
+            <div className="Viewer">
+                <img className="Viewer-img" />
             </div>
         );
     }
