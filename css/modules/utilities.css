@@ -1,0 +1,9 @@
+.u-right {
+	float:right;
+}
+.u-left {
+	float:left;
+}
+.u-inlineBlock {
+	display: inline-block;
+}
