@@ -1,4 +1,3 @@
-// app.js
 'use strict';
 import React from 'react';
 import CakeWalk from './components/cakewalk.jsx';
