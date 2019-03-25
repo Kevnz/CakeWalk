@@ -1,2 +1,6 @@
 node_modules
-config
+dist
+build
+.cache
+.DS_Store
+*.log

@@ -1,6 +1,15 @@
-cakewalk-gallery
-===
+# My Custom App
 
-### About
+```
+- docker
+- src
+-- server
+--- models
+--- public
+--- routes
+-- ui
+--- core
+--- features
 
-Write a readme for your app here
+```
+
