@@ -1,6 +1,7 @@
 var cloudinary = require('cloudinary')
 var config = require('xtconf')()
-var fs = require('fs')
+const fs = require('fs').promises
+const path = require('path')
 
 cloudinary.config({
   cloud_name: config.get('cloudinary-name'),
@@ -20,3 +21,8 @@ fs.readdir('./gallery', function(err, files) {
     )
   }
 })
+
+module.exports = async () => {
+  const files = await fs.readdir(path.join(process.cwd(), ('./gallery'))
+
+}

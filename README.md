@@ -1,4 +1,6 @@
-# My Custom App
+# CakeWalk - Image Gallery Client-Side application.
+
+I have images, and I want to show them off.
 
 ```
 - docker
